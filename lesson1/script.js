@@ -12,8 +12,7 @@ let cost2 = +prompt("Во сколько обойдется?", "");
 let appData = {
     budget: money,
     timeData: time,
-    expenses: {
-    },
+    expenses: {},
     optionalExpenses: {},
     income: [],
     savings: false
