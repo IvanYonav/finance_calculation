@@ -16,8 +16,49 @@ for (let i = 0; i < 2; i++) {
     let mandatoryArticle = prompt("Введите обязательную статью расходов в этом месяце", ""),
         answer = +prompt("Во сколько обойдется?", "");
 
-    appData.expenses[mandatoryArticle] = answer;
+    if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null
+        && (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
+        appData.expenses[mandatoryArticle] = answer;
+    } else
+        if (i = 0) continue;
+    }
 
-}
-let moneyDay = (money - (secondAnswer + firstAnswer)) / 30;
+let moneyDay = money / 30;
 alert("Ваш бюджет на один день составит: " + moneyDay + " руб.");
+
+
+
+// Расчет через цикл while
+
+/* let i = 0;
+while (i < 2) {
+    let mandatoryArticle = prompt("Введите обязательную статью расходов в этом месяце", "");
+    let answer = +prompt("Во сколько обойдется?", "");
+    i++;
+    if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
+        (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
+        appData.expenses[mandatoryArticle] = answer;
+    } else
+        if (i = 0) continue
+} */
+
+
+// расчет через цикл do…while
+
+/* let i = 0;
+do {
+    let mandatoryArticle = prompt("Введите обязательную статью расходов в этом месяце", "");
+    let answer = +prompt("Во сколько обойдется?", "");
+    appData.expenses[mandatoryArticle] = answer;
+    i++;
+    if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
+        (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
+        appData.expenses[mandatoryArticle] = answer;
+    } else
+        if (i = 0) continue
+}
+while (i < 2); */
+
+
+
+
