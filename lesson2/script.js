@@ -19,7 +19,7 @@ for (let i = 0; i < 2; i++) {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null
         && (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else i--
+    } else {i-- }
 }
 
 let moneyDay = money / 30;
@@ -35,7 +35,7 @@ while (i < 2) {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
         (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else i--
+    } else {i--}
 } */
 
 
@@ -51,7 +51,7 @@ do {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
         (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else i--
+    } else {i--}
 }
 while (i < 2);
  */
