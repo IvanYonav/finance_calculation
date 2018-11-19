@@ -19,14 +19,11 @@ for (let i = 0; i < 2; i++) {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null
         && (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else
-        if (i = 0) continue;
-    }
+    } else i--
+}
 
 let moneyDay = money / 30;
 alert("Ваш бюджет на один день составит: " + moneyDay + " руб.");
-
-
 
 // Расчет через цикл while
 
@@ -38,9 +35,9 @@ while (i < 2) {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
         (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else
-        if (i = 0) continue
+    } else i--
 } */
+
 
 
 // расчет через цикл do…while
@@ -54,10 +51,10 @@ do {
     if ((typeof (mandatoryArticle)) === 'string' && (typeof (mandatoryArticle)) != null &&
         (typeof (answer)) != null && mandatoryArticle != '' && answer != '' && mandatoryArticle.length < 50) {
         appData.expenses[mandatoryArticle] = answer;
-    } else
-        if (i = 0) continue
+    } else i--
 }
-while (i < 2); */
+while (i < 2);
+ */
 
 
 
