@@ -36,16 +36,12 @@ function chooseExpenses() {
 chooseExpenses();
 
 function chooseOptExpenses() {
-    for (let i = 0; i < 4; i++) {5555
-        if (i == 0) {
-            continue;
-        }
+    for (let i = 1; i < 4; i++) {
         let optArticle = prompt("Статья необязательных расходов?", "");
 
         if ((typeof (optArticle)) === 'string' && (typeof (optArticle)) != null && optArticle != '' && optArticle.length < 50) {
             appData.optionalExpenses[i] = optArticle;
         }
-
     }
 }
 chooseOptExpenses();
