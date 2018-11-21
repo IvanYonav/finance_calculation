@@ -37,12 +37,10 @@ chooseExpenses();
 
 function chooseOptExpenses() {
     for (let i = 0; i < 3; i++) {
-        let optArticle = prompt("Введите статью Необязательных расходов в этом месяце", ""),
-            answOptArt = +prompt("Во сколько обойдется?", "");
+        let optArticle = prompt("Статья необязательных расходов?", "");
 
-        if ((typeof (optArticle)) === 'string' && (typeof (optArticle)) != null &&
-            (typeof (answOptArt)) != null && optArticle != '' && answOptArt != '' && optArticle.length < 50) {
-            appData.expenses[optArticle] = answOptArt;
+        if ((typeof (optArticle)) === 'string' && (typeof (optArticle)) != null && optArticle != '' && optArticle.length < 50) {
+            appData.optionalExpenses[i] = optArticle;
         }
     }
 }
