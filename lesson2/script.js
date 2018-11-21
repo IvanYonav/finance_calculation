@@ -22,9 +22,19 @@ for (let i = 0; i < 2; i++) {
     } else {i-- }
 }
 
-let moneyDay = money / 30;
-alert("Ваш бюджет на один день составит: " + moneyDay + " руб.");
+appData.moneyPerDay = appData.budget / 30;
 
+alert("Ваш бюджет на один день составит: " + appData.moneyPerDay + " руб.");
+
+if (appData.moneyPerDay < 100) {
+    console.log("минимальный уровень достатка");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log("средний уровень достатка");
+} else if (appData.moneyPerDay > 2000) {
+    console.log("Высокий уровень достака");
+} else {
+    console.log("Произошла ошибка")
+}
 // Расчет через цикл while
 
 /* let i = 0;
@@ -37,8 +47,6 @@ while (i < 2) {
         appData.expenses[mandatoryArticle] = answer;
     } else {i--}
 } */
-
-
 
 // расчет через цикл do…while
 
@@ -53,8 +61,8 @@ do {
         appData.expenses[mandatoryArticle] = answer;
     } else {i--}
 }
-while (i < 2);
- */
+while (i < 2); */
+
 
 
 
