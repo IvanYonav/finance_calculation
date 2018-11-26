@@ -1,7 +1,7 @@
 
 let str = "урок - 3 - был слишком легким";
 
-function easyLes() {
+function.easyLes() {
     capitalLet = str[0].toUpperCase() + str.slice(1);
     console.log(capitalLet);
 
