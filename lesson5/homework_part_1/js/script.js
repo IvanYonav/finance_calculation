@@ -1,18 +1,17 @@
 let menuItem = document.querySelectorAll('.menu-item'),
     wrapperMenu = document.querySelector('.menu'),
-    body = document.getElementsByClassName('body'),
-    div = document.createElement('div'),
+    li = document.createElement('li'),
     text = document.getElementById('title'),
-    adv = document.querySelector('.adv');
+    adv = document.querySelector('.adv'),
+    column = document.querySelectorAll('.column');
 
 // меняем местами пункты меню
-wrapperMenu.appendChild(menuItem[1]);
-wrapperMenu.appendChild(menuItem[3]);
+wrapperMenu.insertBefore(menuItem[2], menuItem[1]);
 
 // добавляем пятый пункт меню
-div.classList.add('menu-item');
-div.innerHTML = 'Пятый пункт';
-wrapperMenu.appendChild(div);
+li.classList.add('menu-item');
+li.innerHTML = 'Пятый пункт';
+wrapperMenu.appendChild(li);
 
 // Добавляем текст в звголовок
 text.textContent = 'Мы продаем только подлинную технику Apple';
@@ -21,7 +20,7 @@ text.textContent = 'Мы продаем только подлинную техн
 document.body.style.background = 'url(./img/apple_true.jpg)';
 
 // убираем рекламу
-adv.style.display = 'none';
+column[1].removeChild(adv);
 
 // спрашиваем про эпл
 let question = prompt("Ваше отношение к технике Apple"),
