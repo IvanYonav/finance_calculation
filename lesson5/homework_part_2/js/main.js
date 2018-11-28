@@ -9,10 +9,10 @@ let startBtn = document.getElementById('start'),
     incomeValue = document.getElementsByClassName('income-value')[0],
     monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
     yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0],
-    mandatoryInput = document.getElementsByClassName('expenses-item'),
+    expensesItem = document.getElementsByClassName('expenses-item'),
 
-    approveBtn1 = document.getElementsByTagName('button')[0],
-    approveBtn2 = document.getElementsByTagName('button')[1],
+    expensesBtn = document.getElementsByTagName('button')[0],
+    optionalExpensesBtn = document.getElementsByTagName('button')[1],
     calcBtn = document.getElementsByTagName('button')[2],
 
     optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
@@ -24,7 +24,6 @@ let startBtn = document.getElementById('start'),
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value');
-
 
 
 
