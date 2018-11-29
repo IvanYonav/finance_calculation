@@ -71,10 +71,9 @@ function BlockExpensesItem() {
     }
 };
 
-
-let sumExp = 0;
-
 expensesBtn.addEventListener('click', function () {
+    let sumExp = 0;
+
     for (let i = 0; i < expensesItem.length; i++) {
         let mandatoryArticle = expensesItem[i].value,
             answer = expensesItem[++i].value;
@@ -85,8 +84,8 @@ expensesBtn.addEventListener('click', function () {
         } else {
             i = i - 1;
         }
+        expensesValue.textContent = sumExp;
     }
-    expensesValue.textContent = sumExp;
 });
 
 
@@ -105,7 +104,7 @@ for (let i = 0; i < optionalExpensesItem.length; i++) {
 
 // функция для проверки ввода НЕобязательных раходов
 function BlockOptionalItem() {
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < optionalExpensesItem.length; i++) {
         if (optionalExpensesItem[i].value != '' && diStart) {
             optionalExpensesBtn.disabled = false;
         } else {
@@ -117,7 +116,7 @@ function BlockOptionalItem() {
 calcBtn.addEventListener('click', function () {
 
     if (appData.budget != undefined) {
-        appData.moneyPerDay = +((appData.budget - sumExp) / 30).toFixed();
+        appData.moneyPerDay = +((appData.budget - expensesValue.textContent) / 30).toFixed();
         dayBudGetValue.textContent = appData.moneyPerDay;
 
         if (appData.moneyPerDay < 100) {
