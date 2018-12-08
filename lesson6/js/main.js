@@ -58,7 +58,7 @@ startBtn.addEventListener('click', function () {
 
 for (let i = 0; i < expensesItem.length; i++) {
     expensesItem[i].addEventListener('input', BlockExpensesItem);
-};
+}
 
 // функция для проверки ввода обязательных раходов
 function BlockExpensesItem() {
@@ -69,7 +69,7 @@ function BlockExpensesItem() {
             expensesBtn.disabled = true;
         }
     }
-};
+}
 
 expensesBtn.addEventListener('click', function () {
     let sumExp = 0;
@@ -100,7 +100,7 @@ optionalExpensesBtn.addEventListener('click', function () {
 
 for (let i = 0; i < optionalExpensesItem.length; i++) {
     optionalExpensesItem[i].addEventListener('input', BlockOptionalItem);
-};
+}
 
 // функция для проверки ввода НЕобязательных раходов
 function BlockOptionalItem() {
@@ -111,7 +111,7 @@ function BlockOptionalItem() {
             optionalExpensesBtn.disabled = true;
         }
     }
-};
+}
 
 calcBtn.addEventListener('click', function () {
 
